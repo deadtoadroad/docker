@@ -6,5 +6,5 @@ RUN apk --no-cache update && \
     rm -rf /var/cache/apk/*
 
 WORKDIR /root
-COPY ./entrypoint.sh ./entrypoint.sh
+COPY ./entrypoint.sh ./
 ENTRYPOINT ["sh", "entrypoint.sh"]

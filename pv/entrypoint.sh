@@ -1,0 +1,1 @@
+cat - | pv -f | cat -

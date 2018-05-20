@@ -2,4 +2,6 @@
 
 set -euo pipefail
 
-docker run -it --rm -v "$(pwd):/root/${PWD##*/}" -w "/root/${PWD##*/}" deadtoadroad/youtube-dl "$@"
+dockerPwd="/root/${PWD##*/}"
+
+docker run -it --rm -v "${PWD}:${dockerPwd}" -w "${dockerPwd}" deadtoadroad/youtube-dl "$@"
